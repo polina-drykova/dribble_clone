@@ -1,0 +1,17 @@
+<%= simple_form_for @shot, html: {multipart: true} do |f| %>
+  <%= f.error_notification %>
+  <div class="columns is-centered">
+    <div class="column is-half">
+
+      <% unless @shot.user_shot.blank? %>
+        <%= image_tag (@shot.user_shot_url), id: 'previewImage' %>
+      <% end %>
+
+      <output id="list"></output>
+      <div id="drop_zone">Drag your shot here</div>
+      <br>
+
+
+    </div>
+  </div>
+<% end %>
