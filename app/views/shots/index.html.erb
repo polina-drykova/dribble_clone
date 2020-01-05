@@ -1,1 +1,22 @@
-index
+<section class="section">
+  <div class="shot">
+    <% @shots.each do |shot| %>
+      <div class="shot-grid-item">
+        <div class="shot-wrapper">
+          <%= link_to shot, class: 'shot' do %>
+            <%= image_tag(shot.user_shot_url) %>
+            <div class="shot-data">
+              <h3 class="shot-title"><%= shot.title %></h3>
+              <div class="shot-description">
+                <%= truncate(shot.description, length: 60) %>
+              </div>
+              <div class="shot-time">
+                <%= time_ago_in_words(shot.created_at) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
