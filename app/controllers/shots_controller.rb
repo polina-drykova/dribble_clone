@@ -1,14 +1,13 @@
 class ShotsController < ApplicationController
   before_action :set_shot, only: [:show, :edit, :update, :destroy, :like, :unlike]
-    before_action :authenticate_user!, only: [:edit, :update, :destroy, :like, :unlike]
-    # impressionist actions: [:show], unique: [:impressionable_type, :impressionable_id, :session_hash]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :like, :unlike]
+  # impressionist actions: [:show], unique: [:impressionable_type, :impressionable_id, :session_hash]
 
   def index
     @shots = Shot.all.order('created_at DESC')
   end
 
   def show
-
   end
 
   def new
@@ -39,5 +38,4 @@ class ShotsController < ApplicationController
   def shot_params
     params.require(:shot).permit(:title, :description, :user_shot)
   end
-
 end

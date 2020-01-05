@@ -30,12 +30,6 @@
   background-color: #f4f4f4;
  }
 
- @media screen and (min-width: 1408px) {
-   .container {
-     max-width: 1120px;
-   }
- }
-
  #drop_zone {
   position: relative;
   padding: 3rem 0;
@@ -83,4 +77,10 @@
 
  .visible {
   display: block !important;
+ }
+
+ @media screen and (min-width: 1408px) {
+   .container {
+     max-width: 1120px;
+   }
  }
