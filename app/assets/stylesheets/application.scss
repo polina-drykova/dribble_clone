@@ -30,6 +30,11 @@
   background-color: #f4f4f4;
  }
 
+ .box, .panel {
+  box-shadow: none;
+  border: 1px solid #dbdbdb;
+ }
+
  #drop_zone {
   position: relative;
   padding: 3rem 0;
