@@ -1,6 +1,10 @@
 // Place all the styles related to the Shots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.content {
+  text-align: justify;
+}
+
 .hero.is-dark {
   background-color: #282828 !important;
 }
