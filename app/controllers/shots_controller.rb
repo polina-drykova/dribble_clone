@@ -28,6 +28,29 @@ class ShotsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @shot.update(shot_params)
+        format.html { redirect_to @shot, notice: 'Shot was successfully updated.' }
+        format.json { render :show, status: :ok, lacation: @shot }
+      else
+        format.html { render :edit }
+        format.json { render json: @shot.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @shot.destroy
+    respond_to do |format|
+      format.html { redirect_to shots_url, notice: 'Shot was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
