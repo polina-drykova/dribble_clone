@@ -37,7 +37,8 @@ gem 'devise'
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'simple_form'
 gem "mini_magick"
-gem 'impressionist', '~> 1.6'
+gem 'impressionist'
+
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
 gem 'acts_as_votable', '~> 0.11.1'
