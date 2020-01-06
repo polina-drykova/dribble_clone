@@ -19,11 +19,12 @@
           <nav class="level shot-analytics">
             <div class="level-left"></div>
             <div class="level-right">
-              <div class="level-item views data">
-                <%= link_to shot do %>
-                  <span class="icon"><i class="fa fa-eye"></i></span>0
-                <% end %>
-              </div>
+              <!-- <div class="level-item views data"> -->
+                <%#= link_to shot do %>
+                  <!-- <span class="icon"><i class="fa fa-eye"></i></span> -->
+                  <%#= shot.impressionist_count(:filter=>:session_hash) %>
+                <%# end %>
+              <!-- </div> -->
               <div class="level-item comments data">
                 <%= link_to shot do %>
                   <span class="icon"><i class="fa fa-comment"></i></span>
@@ -45,8 +46,8 @@
             <%= gravatar_image_tag(shot.user.email.gsub('spam', 'mdeering'), alt: shot.user.username, gravatar: { size: 20 }); %>
           </div>
           <div class="user-name">
-            <%= current_user.first_name %>
-            <%= current_user.last_name %>
+            <%= shot.user.first_name %>
+            <%= shot.user.last_name %>
           </div>
         </div>
 

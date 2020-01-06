@@ -275,7 +275,7 @@ DEPENDENCIES
   gravatar_image_tag
   guard
   guard-livereload (~> 2.5)
-  impressionist (~> 1.6)
+  impressionist
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
