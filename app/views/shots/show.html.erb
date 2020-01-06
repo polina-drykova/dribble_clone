@@ -66,8 +66,7 @@
           </div>
           <div class="panel-block comments data">
             <span class="icon"><i class="fa fa-comment"></i></span>
-            0
-            <%#= pluralize(@shot.comments.count, 'Comment') %>
+            <%= pluralize(@shot.comments.count, 'Comment') %>
           </div>
           <div class="panel-block likes data">
             <span class="icon"><i class="fa fa-heart"></i></span>
