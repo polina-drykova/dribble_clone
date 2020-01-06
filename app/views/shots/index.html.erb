@@ -49,13 +49,16 @@
                       </span>
                     <% end %>
                   <% end %>
+
                 <% else %>
+
                   <%= link_to like_shot_path(shot), method: :put, class: 'unlike_shot' do %>
                     <span class="icon"><i class="fa fa-heart"></i></span>
                     <span class="vote_count">
                       <%= shot.get_likes.size %>
                     </span>
                   <% end %>
+
                 <% end %>
               </div>
             </div>
