@@ -6,4 +6,5 @@ class User < ApplicationRecord
   # mount_uploader :avatar, PhotoUploader
   has_many :shots, dependent: :destroy
   has_many :comments, dependent: :destroy
+  acts_as_voter
 end

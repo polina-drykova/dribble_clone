@@ -32,9 +32,33 @@
                 <% end %>
               </div>
               <div class="level-item likes">
-                <%= link_to '#' do %>
-                  <span class="icon"><i class="fa fa-heart"></i></span>
-                  <span class="vote_count">0</span>
+                <% if user_signed_in? %>
+
+                  <% if current_user.liked? shot %>
+                    <%= link_to unlike_shot_path(shot), method: :put, class: 'unlike_shot' do %>
+                      <span class="icon"><i class="fa fa-heart has-text-primary"></i></span>
+                      <span class="vote_count">
+                        <%= shot.get_likes.size %>
+                      </span>
+                    <% end %>
+                  <% else %>
+                    <%= link_to like_shot_path(shot), method: :put, class: 'unlike_shot' do %>
+                      <span class="icon"><i class="fa fa-heart"></i></span>
+                      <span class="vote_count">
+                        <%= shot.get_likes.size %>
+                      </span>
+                    <% end %>
+                  <% end %>
+
+                <% else %>
+
+                  <%= link_to like_shot_path(shot), method: :put, class: 'unlike_shot' do %>
+                    <span class="icon"><i class="fa fa-heart"></i></span>
+                    <span class="vote_count">
+                      <%= shot.get_likes.size %>
+                    </span>
+                  <% end %>
+
                 <% end %>
               </div>
             </div>

@@ -41,8 +41,7 @@ gem 'impressionist'
 
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
-gem 'acts_as_votable', '~> 0.11.1'
-
+gem 'acts_as_votable'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
